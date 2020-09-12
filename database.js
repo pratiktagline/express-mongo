@@ -13,7 +13,6 @@ mongoose.connect(
         // check error
         assert.equal(error, null, "DB connection stop..")
 
-        // ok
         // console.log(link)
         console.log("DB connection successful")
     })

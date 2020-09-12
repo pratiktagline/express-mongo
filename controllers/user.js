@@ -7,7 +7,6 @@ const User = require('./../models/user')
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: true }));
 
-// router goes here
 router.all(
     '/',
     (req, res) => {
@@ -44,25 +43,6 @@ router.post('/createNew', (req, res) => {
             })
         })
 })
-// var insertUser = new User({
-//     username : req.body.username,
-//     email : req.body.email
-// });
-
-// insertUser.save((error, result) => {
-//     if(error){
-//         return res.json({
-//             status : false,
-//             message : "Database insert fail..",
-//             error : error
-//         })
-//     }
-//     return res.json({
-//         status : true,
-//         message : "Database insert seccessful..",
-//         result : result
-//     })
-// })
 
 router.get(
     '/find',
@@ -77,7 +57,7 @@ router.get(
             }
             return res.json({
                 status: true,
-                message: "database find successfully..",
+                message: "database find successful..",
                 result
             })
 
